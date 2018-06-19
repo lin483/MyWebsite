@@ -5,8 +5,3 @@ window.onscroll = function () {
     document.getElementById('gotoTop').style.display = 'none';
   }
 }
-
-function gotoTopFunction () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
