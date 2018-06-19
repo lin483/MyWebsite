@@ -1,41 +1,10 @@
-#welcome-message {
-  text-align: center;
-  color: #C0C0C0;
-  font-size: 100px;
-  padding-top: 15%;
-  padding-bottom: 15%;
-}
-
-a[aria-expanded='false'] > .caret {
-  transform: rotate(-90deg);
-}
-
+/* Overall styling */
 body {
   background-color: white;
 }
 
 .container-fluid {
   background-color: black;
-}
-
-.nav {
-  background-color: black;
-}
-
-#gotoTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  font-size: 24px;
-  background-color: green;
-  color: white;
-  z-index: 99;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
 }
 
 li a {
@@ -56,6 +25,42 @@ p {
   font-size: 60px;
   padding-top: 8%;
   padding-bottom: 5%;
+}
+
+/* Nav menu */
+.nav {
+  background-color: black;
+}
+
+/* gotoTop */
+#gotoTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 24px;
+  background-color: green;
+  color: white;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Welcome Message */
+#welcome-message {
+  text-align: center;
+  color: #C0C0C0;
+  font-size: 100px;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+/* Projects Section */
+a[aria-expanded='false'] > .caret {
+  transform: rotate(-90deg);
 }
 
 .panel-group {
