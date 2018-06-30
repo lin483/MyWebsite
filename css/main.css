@@ -1,6 +1,6 @@
 /* Overall styling */
 body {
-  background-color: white;
+  background-color: black;
 }
 
 .container-fluid {
@@ -66,4 +66,20 @@ a[aria-expanded='false'] > .caret {
 .panel-group {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  #welcome-message {
+    font-size: 50px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+
+  .title {
+    padding-top: 15%;
+  }
+
+  p {
+    font-size: 25px;
+  }
 }
