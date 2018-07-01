@@ -68,18 +68,52 @@ a[aria-expanded='false'] > .caret {
   padding-right: 50px;
 }
 
-@media screen and (max-width: 720px) {
+/* For cellphones */
+@media only screen and (max-width: 600px) {
   #welcome-message {
-    font-size: 50px;
-    padding-top: 50%;
-    padding-bottom: 50%;
+    font-size: 45px;
+    padding-top: 55%;
+    padding-bottom: 55%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 30px;
+    padding-top: 20%;
+  }
+
+  #gotoTop {
+    font-size: 16px;
+    bottom: 15px;
+    right: 20px;
+    padding: 10px;
+  }
+}
+
+/* For tablets */
+@media only screen and (min-width: 601px) and (max-width: 1080px) {
+  #welcome-message {
+    font-size: 65px;
+    padding-top: 30%;
+    padding-bottom: 30%;
   }
 
   .title {
     padding-top: 15%;
+    font-size: 50px;
   }
 
   p {
     font-size: 25px;
+  }
+
+  #gotoTop {
+    font-size: 16px;
+    bottom: 15px;
+    right: 20px;
+    padding: 10px;
   }
 }
