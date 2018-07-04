@@ -72,17 +72,21 @@ a[aria-expanded='false'] > .caret {
 @media only screen and (max-width: 600px) {
   #welcome-message {
     font-size: 45px;
-    padding-top: 55%;
-    padding-bottom: 55%;
+    padding-top: 65%;
+    padding-bottom: 65%;
   }
 
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .title {
     font-size: 30px;
     padding-top: 20%;
+  }
+
+  .panel-title {
+    font-size: 12px;
   }
 
   #gotoTop {
