@@ -18,6 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+theme_mode: light  # default theme (light or dark)
+
 title: Hengyi Lin's Personal Site
 author: Hengyi Lin
 email: hengyilin483@gmail.com
