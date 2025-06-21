@@ -1,0 +1,63 @@
+.site-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+  
+  .site-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    @include gradient-text($primary-gradient);
+    color: $text-light !important;
+  }
+  
+  .site-nav .page-link {
+    color: $text-light;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  // Force all text to be dark in light mode
+  * {
+    color: $text-light;
+  }
+  
+  a, span, p, div {
+    color: $text-light !important;
+  }
+}
+
+body.dark .site-header {
+  background: rgba(45, 45, 45, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+  .site-title {
+    @include gradient-text(linear-gradient(45deg, $primary-color-dark, $secondary-color-dark));
+    color: $text-dark !important;
+  }
+  
+  .site-nav .page-link {
+    color: $text-dark;
+    
+    &:hover {
+      color: $primary-color-dark;
+    }
+  }
+  
+  // Force all text to be light in dark mode
+  * {
+    color: $text-dark;
+  }
+  
+  a, span, p, div {
+    color: $text-dark !important;
+  }
+}

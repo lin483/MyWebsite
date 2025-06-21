@@ -1,0 +1,29 @@
+// Colors
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$primary-gradient-dark: linear-gradient(135deg, #4c1d95 0%, #6b21a8 100%);
+
+$primary-color: #667eea;
+$primary-color-dark: #8ab4f8;
+$secondary-color: #764ba2;
+$secondary-color-dark: #aecbfa;
+
+// Text colors
+$text-light: #333;
+$text-light-secondary: #555;
+$text-dark: #e0e0e0;
+$text-dark-secondary: #b0b0b0;
+
+// Background colors
+$bg-light: #fff;
+$bg-dark: #2d2d2d;
+$bg-light-secondary: #f8f9fa;
+$bg-dark-secondary: #404040;
+
+// Shadows
+$shadow-light: 0 10px 40px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;

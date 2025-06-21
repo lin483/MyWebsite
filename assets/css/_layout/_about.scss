@@ -1,0 +1,225 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.profile-image {
+  margin-bottom: 25px;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f8f9fa;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  
+  body.dark & {
+    border-color: $bg-dark-secondary;
+  }
+}
+
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+  @include gradient-text($primary-gradient);
+  
+  body.dark & {
+    @include gradient-text(linear-gradient(45deg, $primary-color-dark, $secondary-color-dark));
+  }
+}
+
+.profile-tagline {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  body.dark & {
+    color: $text-dark-secondary;
+  }
+}
+
+// Skills section
+.skills-section {
+  margin-top: 35px;
+  text-align: left;
+  
+  h3 {
+    color: $text-light;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    @include heading-underline($primary-gradient, 50px);
+    
+    body.dark & {
+      color: $text-dark;
+      
+      &::after {
+        background: linear-gradient(45deg, $primary-color-dark, $secondary-color-dark);
+      }
+    }
+  }
+}
+
+.skill-category {
+  margin-bottom: 25px;
+  
+  h4 {
+    color: #495057;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    
+    body.dark & {
+      color: $text-dark;
+    }
+  }
+}
+
+.skill-items {
+  margin-bottom: 15px;
+}
+
+.skill-item {
+  margin-bottom: 8px;
+  padding: 4px 0;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #495057;
+  line-height: 1.4;
+  
+  body.dark & {
+    color: $text-dark-secondary !important;
+  }
+}
+
+// Responsive
+@media (max-width: $tablet) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .profile-section {
+    position: static;
+  }
+  
+  .profile-card,
+  .about-content {
+    padding: 30px 25px;
+  }
+  
+  .profile-name {
+    font-size: 1.8rem;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .skill-name {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+// ADD THIS - Missing profile card styling
+.profile-card {
+  @include content-card;
+  text-align: center;
+}
+
+// ADD THIS - Missing about content styling  
+.about-content {
+  @include content-card;
+}
+
+.about-content h2 {
+  color: $text-light;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    border-radius: 2px;
+  }
+  
+  body.dark & {
+    color: $text-dark;
+    
+    &::after {
+      background: linear-gradient(45deg, $primary-color-dark, $secondary-color-dark);
+    }
+  }
+}
+
+.about-text {
+  color: $text-light-secondary;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  
+  p {
+    margin-bottom: 25px;
+    color: $text-light-secondary;
+  }
+  
+  h3 {
+    color: $text-light;
+    font-size: 1.4rem;
+    margin: 35px 0 20px 0;
+    font-weight: 600;
+  }
+  
+  ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    color: $text-light-secondary;
+  }
+  
+  body.dark & {
+    color: $text-dark;
+    
+    p, li {
+      color: $text-dark;
+    }
+    
+    h3 {
+      color: $text-dark;
+    }
+  }
+}

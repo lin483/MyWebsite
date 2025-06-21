@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {% include head.html %}
 </head>
+
 <body class="{% if site.theme_mode %}{{ site.theme_mode }}{% else %}light{% endif %}">
   <!-- Scroll Progress Bar -->
   <div class="progress-container">
@@ -12,8 +14,10 @@
   {% include header.html %}
 
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
+    <div class="content-wrapper">
+      <div class="main-content-card">
+        {{ content }}
+      </div>
     </div>
   </main>
 
@@ -24,8 +28,9 @@
     <span class="sun-icon">☀️</span>
     <span class="moon-icon">🌙</span>
   </button>
-  
+
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/scroll-progress.js' | relative_url }}"></script>
 </body>
+
 </html>

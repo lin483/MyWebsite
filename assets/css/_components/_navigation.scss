@@ -1,0 +1,85 @@
+// Enhanced navigation styling
+.site-nav {
+  .page-link {
+    margin-left: 0.5rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      background: rgba(102, 126, 234, 0.1);
+      transform: translateY(-1px);
+      text-decoration: none;
+      
+      body.dark & {
+        background: rgba(138, 180, 248, 0.1);
+      }
+    }
+    
+    // Active page indicator
+    &.current {
+      background: rgba(102, 126, 234, 0.2);
+      font-weight: 600;
+      
+      body.dark & {
+        background: rgba(138, 180, 248, 0.2);
+      }
+    }
+  }
+  
+  // Mobile menu toggle
+  .menu-icon {
+    display: none;
+    
+    @media (max-width: $tablet) {
+      display: block;
+      cursor: pointer;
+      padding: 8px;
+      
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: $text-light;
+        
+        body.dark & {
+          fill: $text-dark;
+        }
+      }
+    }
+  }
+  
+  // Mobile menu
+  @media (max-width: $tablet) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    padding: 1rem 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    body.dark & {
+      background: rgba(45, 45, 45, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .page-link {
+      display: block;
+      margin: 0.5rem 1rem;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+// Home page specific styling
+.home-hero {
+  text-align: center;
+  padding: 4rem 0;
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @include gradient-text($primary-gradient);
+    
+    body.dark & {
+      @include gradient-text(linear-gradient(45deg, $primary-color-dark, $secondary-color-dark));
+    }
+    
+    @media (max-width: $tablet) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+    color: $text-light-secondary;
+    margin-bottom: 2rem;
+    
+    body.dark & {
+      color: $text-dark-secondary;
+    }
+  }
+  
+  .hero-cta {
+    display: inline-flex;
+    gap: 1rem;
+    
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+  
+  .feature-card {
+    @include content-card;
+    text-align: center;
+    @include hover-lift;
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+      @include gradient-text($primary-gradient);
+      
+      body.dark & {
+        @include gradient-text(linear-gradient(45deg, $primary-color-dark, $secondary-color-dark));
+      }
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text-light;
+      
+      body.dark & {
+        color: $text-dark;
+      }
+    }
+    
+    .feature-description {
+      color: $text-light-secondary;
+      line-height: 1.6;
+      
+      body.dark & {
+        color: $text-dark-secondary;
+      }
+    }
+  }
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+  
+  .stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      @include gradient-text($primary-gradient);
+      margin-bottom: 0.5rem;
+      
+      body.dark & {
+        @include gradient-text(linear-gradient(45deg, $primary-color-dark, $secondary-color-dark));
+      }
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+      color: $text-light-secondary;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      
+      body.dark & {
+        color: $text-dark-secondary;
+      }
+    }
+  }
+}
