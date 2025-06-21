@@ -1,0 +1,39 @@
+.site-footer {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  
+  // Force all text to be dark in light mode
+  * {
+    color: #666;
+  }
+  
+  a, span, p, div {
+    color: #666 !important;
+  }
+  
+  a:hover {
+    color: $primary-color !important;
+  }
+}
+
+body.dark .site-footer {
+  background: rgba(45, 45, 45, 0.95);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  
+  // Force all text to be light in dark mode
+  * {
+    color: $text-dark-secondary;
+  }
+  
+  a, span, p, div {
+    color: $text-dark-secondary !important;
+  }
+  
+  a:hover {
+    color: $primary-color-dark !important;
+  }
+}

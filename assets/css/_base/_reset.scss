@@ -1,0 +1,56 @@
+// Additional reset styles beyond what Minima provides
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar,
+  .theme-toggle,
+  body.light,
+  body.dark,
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// Respect user's color scheme preference
+@media (prefers-color-scheme: dark) {
+  body:not(.light):not(.dark) {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+}
+// Typography mixins and base styles
+@mixin gradient-text($gradient: $primary-gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin heading-underline($color: $primary-gradient, $width: 60px) {
+  position: relative;
+  padding-bottom: 0.5rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $width;
+    height: 3px;
+    background: $color;
+    border-radius: 2px;
+  }
+}
+
+// Base typography
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

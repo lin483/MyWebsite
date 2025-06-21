@@ -1,0 +1,39 @@
+@mixin content-card {
+  background: $bg-light;
+  border-radius: 20px;
+  box-shadow: $shadow-light;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  
+  body.dark & {
+    background: $bg-dark;
+    box-shadow: $shadow-dark;
+  }
+}
+
+.content-card,
+.main-content-card {
+  @include content-card;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $primary-gradient;
+    
+    body.dark & {
+      background: linear-gradient(90deg, $primary-color-dark 0%, $secondary-color-dark 100%);
+    }
+  }
+}
+
+.profile-card {
+  @include content-card;
+  text-align: center;
+}
