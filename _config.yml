@@ -25,7 +25,7 @@ author: Hengyi Lin
 email: hengyilin483@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A simple personal site for Hengyi Lin, built with Jekyll.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/MyWebsite" # the subpath of your site, e.g. /blog
 url: "https://hengyi-lin.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lin483
 linkedin_username: hengyilin483
